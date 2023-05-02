@@ -40,15 +40,15 @@ function updateDots() {
 	const dotElements = banner.querySelectorAll(".dot");
 	for (var i = 0; i < dotElements.length; i++) {
 		if (i === currentSlideIndex) {
-			dotElements[i].classList.add("dot_selected");
+			dotElements[i].classList.add("dot_selected"); // Ajout de la classe dot_selected si l'index correspond à l'itérateur
 		} else {
-			dotElements[i].classList.remove("dot_selected");
+			dotElements[i].classList.remove("dot_selected"); // Sinon suppression de la classe
 		}
 	}
 }
 // Ajouter un événement de clic à la flèche gauche
 arrowLeft.addEventListener("click", function () {
-	currentSlideIndex = (currentSlideIndex + slides.length - 1) % slides.length;
+	currentSlideIndex = (currentSlideIndex + slides.length - 1) % slides.length; // Défilement infini grace au modulo
 	updateBanner();
 	console.log("La flèche gauche a été cliqué !");
 	console.log(currentSlideIndex);
@@ -56,7 +56,7 @@ arrowLeft.addEventListener("click", function () {
 
 // Ajouter un événement de clic à la flèche droite
 arrowRight.addEventListener("click", function () {
-	currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+	currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Défilement infini grace au modulo
 	updateBanner();
 	console.log("La flèche droite a été cliqué !");
 	console.log(currentSlideIndex);
