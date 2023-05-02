@@ -17,6 +17,19 @@ const slides = [
 	}
 ]
 
+// Initialiser l'index de la diapositive actuelle à 0
+let currentSlideIndex = 0;
 
+// Ajouter un événement de clic à la flèche gauche
+arrowLeft.addEventListener("click", function(){
+	console.log("La flèche gauche a été cliqué !");
+	console.log(currentSlideIndex);
+});
+
+// Ajouter un événement de clic à la flèche droite
+arrowRight.addEventListener("click", function(){
+	console.log("La flèche droite a été cliqué !");
+	console.log(currentSlideIndex);
+});
 
 
